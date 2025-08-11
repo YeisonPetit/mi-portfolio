@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/person-in-tuxedo-dark-skin-tone-svgrepo-com.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>portfolio oficial</title>
+</head>
+<body>
+    
+<!-- this part its for the header, navs and more -->
+<header>
+    <nav>
+        <a href="#" class="logo"> <i class="fa-solid fa-code"></i><strong>Yeison petit</strong>  </a>
+        <ul class="nav-links" id="container_Links">
+            
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects <i class="fa-solid fa-arrow-up"></i></a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button class="btnsun" id="btnaun"></button>
+        </ul>
+    <div class="burger">
+        <div class="line1" id="btnBurger"><i class="fa-solid fa-bars"></i></i>
+        </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="id show"></div>
+
+<!-- this is the main of all the page -->
+    <main>
+        <section class="home" id="home">
+            <div class="home-text">
+                <h1>Hi, I'm  Yeison Petit <br> Frontend developer</h1>
+                <p>student passionate about building clean, responsive, 
+                and user-friendly websites. Currently learning and working with HTML, 
+                CSS, JavaScript, Tailwind, and React to create modern web projects.</p>
+                <div class="resume">
+                <a href="#" class="btn" id="downloadBtn" onclick="downloadResume()">
+                Resume <i class="fa-solid fa-file"></i>
+            </a>
+                <a href="https://github.com/YeisonPetit" class="btn">
+            Github <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yeison-petit-francois-821006316/" class="btn">
+            Linkedin <i class="fa-brands fa-linkedin"></i></i>
+            </a>
+            </div>
+            </div>
+            <div class="myphoto">
+                <img src="/assets/me1.png" alt="">
+                </div>
+        </section>
+
+<!-- section of the technologies -->
+ <section class="technologies" id="technologies">
+        <h2>Skills and Technologies</h2>
+        <div class="tech-icons">
+            <i class="fa-brands fa-html5" title="HTML5"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+            <i class="fa-brands fa-js" title="JavaScript"></i>
+            <i class="fa-brands fa-react" title="React"></i>
+        </div>
+    </section>
+
+    <!-- Section of the projects -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="projects_box">
+            <div class="box">
+                <a href="https://layoud-food.vercel.app/#">
+                    <div class="img_box">
+                        <img src="/assets/websiteFood2.png" alt="Food Website Project">
+                    </div>
+                    <div class="text_box">
+                        <h1>Food Website</h1>
+                        <span>A modern food ordering website with responsive design and smooth animations.</span>
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="box">
+                <a href="https://yeisonpetit.github.io/encriptador/">
+                    <div class="img_box">
+                        <img src="/assets/encriptador.png" alt="Dashboard Project">
+                    </div>
+                    <div class="text_box">
+                        <h1>Encriptador App</h1>
+                        <span>Interactive dashboard with data visualization and real-time updates.</span>
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="box">
+                <a href="https://yeisonpetit.github.io/Juego-secreto/">
+                    <div class="img_box">
+                        <img src="/assets/juego-secreto.png" alt="E-commerce Project">
+                    </div>
+                    <div class="text_box">
+                        <h1>Juego de adivinanzas</h1>
+                        <span>Full-stack e-commerce platform with payment integration and user authentication.</span>
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="box">
+                <a href="#">
+                    <div class="img_box">
+                        <img src="/assets/coming-soon.jpg" alt="Mobile App Project">
+                    </div>
+                    <div class="text_box">
+                        <h1>Mobile App</h1>
+                        <span>Cross-platform mobile application built with React Native and modern UI.</span>
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+<div class="floating-shapes">
+        <i class="fas fa-envelope shape"></i>
+        <i class="fas fa-paper-plane shape"></i>
+        <i class="fas fa-heart shape"></i>
+    </div>
+
+    <section class="contact">
+        <h1>Let's talk <i class="fa-solid fa-envelope"></i></h1>
+        
+        <div class="form_of_Contact">
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address</strong><br>
+                        Residencial amanda 1, calle Fundaciion #20A
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong><br>
+                        +1 (809) 607 7212
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        yeisonpetit2@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="required">First Name</label>
+                            <div class="input-icon">
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="error" id="firstNameError">Please enter your first name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="required">Last Name</label>
+                            <div class="input-icon">
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="error" id="lastNameError">Please enter your last name</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <div class="input-icon">
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="error" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message" class="required">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us more about your project, questions, or how we can assist you..." required></textarea>
+                        <div class="error" id="messageError">Please enter your message</div>
+                    </div>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
