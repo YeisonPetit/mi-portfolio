@@ -347,7 +347,7 @@ body.active .projects {
 
 .text_box {
   padding: 25px;
-  text-align: center;
+  text-align: justify;
 }
 
 .text_box h1 {
@@ -363,7 +363,18 @@ body.active .projects {
 }
 
 .text_box i {
+
+.fa-css3-alt {
   color: #1572b6;
+}
+.fa-js {
+  color: #f7df1e;
+}
+.fa-react {
+  color: #61dafb;
+}
+font-size: 1.3rem;
+
 }
 
 .contact {
