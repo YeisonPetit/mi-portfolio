@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -33,7 +37,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 200px;
+  margin: 20px 150px;
   border-radius: 20px;
   height: 100px;
   box-shadow: 2px 3px 1px 1px black;
@@ -81,6 +85,12 @@ nav .logo img {
 .nav-links {
   display: flex;
   gap: 15px;
+  background-color: white;
+}
+
+body.active .nav-links {
+  background-color: #171617;
+  color: white;
 }
 
 .nav-links li {
@@ -118,6 +128,9 @@ body.active nav {
 
 a {
   text-decoration: none;
+}
+.closed{
+  display: none;
 }
 .nav-links li a i {
   transform: rotate(30deg);
@@ -229,6 +242,91 @@ body.active .resume a {
   color: white;
 }
 
+
+.aboutMe{
+  margin-bottom: 40px;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  gap: 20px;
+  /* padding-left: 30px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.abouMeContent{
+  margin: 0 130px;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+
+}
+
+.abouMeContent h2{
+  font-size: 3rem;
+}
+
+.abouMeContent p{
+  max-width: 700px;
+  text-align: justify;
+}
+
+.career{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.box_career{
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.box_career h1{
+  font-size: 1.1rem;
+  border-bottom: 2px solid rgb(216, 209, 209);
+}
+
+.box_career p{
+  font-size: 1rem;
+  text-align: start;
+}
+
+body.active .box_career {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+body.active .aboutMe {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 .projects h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -238,7 +336,7 @@ body.active .resume a {
 
 /* Technologies Section */
 .technologies {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   width: 100%;
   height: 30vh;
   display: flex;
@@ -249,6 +347,12 @@ body.active .resume a {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+body.active .technologies {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .tech-icons {
@@ -262,6 +366,10 @@ body.active .resume a {
   font-size: 4rem;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.tech-icons svg{
+  color: red;
 }
 
 .tech-icons i:hover {
@@ -382,8 +490,8 @@ font-size: 1.3rem;
             max-width: 1200px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 4px solid rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 4px solid rgba(0, 0, 0, 0.2);
             padding: 40px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             animation: slideUp 0.8s ease-out;
@@ -711,6 +819,24 @@ main{
   .burger {
     display: flex;
   }
+
+  nav .btnsun{
+    display: none;
+  }
+
+  nav .closed{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+  }
+
+  body.active container_Links{
+    background-color: rebeccapurple;
+  }
+  
 header{
     width: 100%;
 
@@ -734,7 +860,6 @@ nav{
     justify-content: center;
     align-items: center;
     transition: 300ms linear;
-    background-color: #171617;
     border-radius: 20px;
     border-left: 3px solid #666;
     filter:  border(20px);
@@ -745,8 +870,10 @@ nav{
 
 }
 
-.nav-links ul li a{
-    background-color: #333;
+.nav-links ul li{
+    background-color: #d91919;
+    width: 100%;
+    height: 100%;
 }
 
 main{
@@ -787,7 +914,17 @@ main{
   width: 100%;
   flex-wrap: nowrap;
 
+  
 }
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: RED;
+  }
+
+  
 }
 
 /* movil L */
@@ -806,6 +943,14 @@ nav{
     margin: 10px;
 }
 
+ nav .closed{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+  }
 .nav-links{
     display: flex;
     flex-direction: column;
@@ -819,7 +964,6 @@ nav{
     justify-content: center;
     align-items: center;
     transition: 300ms linear;
-    background-color: #171617;
     border-radius: 20px;
     border-left: 3px solid #666;
     filter:  border(20px);
@@ -831,7 +975,7 @@ nav{
 }
 
 .nav-links ul li a{
-    background-color: #333;
+    background-color: #7b7676;
 }
 
 main{
@@ -920,5 +1064,11 @@ main{
   height: 400px;
 }
 
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 
 }
