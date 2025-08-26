@@ -6,11 +6,11 @@ const menu = document.getElementById("btnBurger")
 const closed = document.getElementById("closed")
 
 
-
+//active menu
 menu.addEventListener("click", () => {
     container_Links.classList.toggle("active")
 })
-
+//close menu
 closed.addEventListener("click", () => {
     container_Links.classList.toggle("active")
 })
