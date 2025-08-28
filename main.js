@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
 });
 // Función para descargar el resume
 function downloadResume() {
-    const pdfPath = './Resume/Yeison-Petit-Resume.pdf';
+    const pdfPath = './Resume/YEISON-PETIT-CV.docx.pdf';
 
     try {
         // Crear el link de descarga
@@ -75,6 +75,8 @@ function downloadResume() {
     }
 }
 
+
+//add animation with scrollReveal
 
 ScrollReveal().reveal('.abouMeContent', { 
     distance: '150px',
