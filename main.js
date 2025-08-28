@@ -49,7 +49,7 @@ function downloadResume() {
         // Crear el link de descarga
         const link = document.createElement('a');
         link.href = pdfPath;
-        link.download = 'Yeison-Petit-Resume-2025.pdf';
+        link.download = 'YEISON-PETIT-CV.docx.pdf';
 
         // Hacer invisible y agregar al DOM
         link.style.display = 'none';
