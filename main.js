@@ -43,13 +43,13 @@ window.addEventListener("load", () => {
 });
 // Función para descargar el resume
 function downloadResume() {
-    const pdfPath = './Resume/YEISON-PETIT-CV.docx.pdf';
+    const pdfPath = 'Resume/YEISON-PETIT-CV.docx.pdf';
 
     try {
         // Crear el link de descarga
         const link = document.createElement('a');
         link.href = pdfPath;
-        link.download = 'YEISON-PETIT-CV.docx.pdf';
+        link.download = 'YEISON-PETIT-CV.pdf';
 
         // Hacer invisible y agregar al DOM
         link.style.display = 'none';
