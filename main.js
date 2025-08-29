@@ -78,28 +78,34 @@ function downloadResume() {
 
 //add animation with scrollReveal
 
-ScrollReveal().reveal('.abouMeContent', { 
+ScrollReveal().reveal('.abouMeContent', {
     distance: '150px',
-    origin: 'bottom,mobile: false' });
+    origin: 'bottom', mobile: false
+});
 
-    ScrollReveal().reveal('.box', { 
+ScrollReveal().reveal('.box', {
     distance: '150px',
-    origin: 'bottom',mobile: false });
+    origin: 'bottom', mobile: false
+});
 
-    ScrollReveal().reveal('.contact-info', { 
+ScrollReveal().reveal('.contact-info', {
     distance: '150px',
-    origin: 'bottom',mobile: false });
+    origin: 'bottom', mobile: false
+});
 
-    ScrollReveal().reveal('.form', { 
-    distance: '150px',
-    origin: 'bottom',
-    mobile: false    });
-
-    ScrollReveal().reveal('.home-text', { 
+ScrollReveal().reveal('.form', {
     distance: '150px',
     origin: 'bottom',
-mobile: false });
+    mobile: false
+});
 
-     ScrollReveal().reveal('.myphoto', { 
-     distance: '150px',
-     origin: 'bottom',mobile: false });
+ScrollReveal().reveal('.home-text', {
+    distance: '150px',
+    origin: 'bottom',
+    mobile: false
+});
+
+ScrollReveal().reveal('.myphoto', {
+    distance: '150px',
+    origin: 'bottom', mobile: false
+});
