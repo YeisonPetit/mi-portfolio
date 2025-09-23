@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="public/person-in-tuxedo-dark-skin-tone-svgrepo-com.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <title>portfolio oficial</title>
 </head>
+
 <body>
-    
-<!-- this part its for the header, navs and more -->
-<header>
-    <nav>
-        <a href="#" class="logo"> <i class="fa-solid fa-code"></i><strong>Yeison Petit</strong>  </a>
-        <ul class="nav-links" id="container_Links">
-            
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#projects">Projects <i class="fa-solid fa-arrow-up"></i></a></li>
-            <li><a href="#contact">Contact</a></li>
-            <button class="btnsun" id="btnaun"></button>
-            <button class="closed" id="closed"><i class="fa-solid fa-xmark"></i></button>
-        </ul>
-    <div class="burger">
-        <div class="line1" id="btnBurger"><i class="fa-solid fa-bars"></i></i>
-        </div>
+
+    <!-- this part its for the header, navs and more -->
+    <header>
+        <nav>
+            <a href="#" class="logo"> <i class="fa-solid fa-code"></i><strong>Yeison Petit</strong> </a>
+            <ul class="nav-links" id="container_Links">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#projects">Projects <i class="fa-solid fa-arrow-up"></i></a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button class="btnsun" id="btnaun"></button>
+                <button class="closed" id="closed"><i class="fa-solid fa-xmark"></i></button>
+            </ul>
+            <div class="burger">
+                <div class="line1" id="btnBurger"><i class="fa-solid fa-bars"></i></i>
+                </div>
             </div>
         </nav>
     </header>
-
-
     <div class="id show"></div>
-
-<!-- this is the main of all the page -->
+    <!-- this is the main of all the page -->
     <main>
         <section class="home" id="home">
             <div class="home-text">
-                <h1>Hi, I'm  Yeison Petit <br> Frontend developer</h1>
-                <p>student passionate about building clean, responsive, 
-                and user-friendly websites. Currently learning and working with HTML, 
-                CSS, JavaScript, Tailwind, and React to create modern web projects.</p>
+                <h1>Hi, I'm Yeison Petit <br> Frontend developer</h1>
+                <p>student passionate about building clean, responsive,
+                    and user-friendly websites. Currently learning and working with HTML,
+                    CSS, JavaScript, Tailwind, and React to create modern web projects.</p>
                 <div class="resume">
-                <a href="#" class="btn" id="downloadBtn" onclick="downloadResume()">
-                Resume <i class="fa-solid fa-file"></i>
-            </a>
-                <a href="https://github.com/YeisonPetit" class="btn">
-            Github <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yeison-petit-francois-821006316/" class="btn">
-            Linkedin <i class="fa-brands fa-linkedin"></i></i>
-            </a>
-            </div>
+                    <a href="#" class="btn" id="downloadBtn" onclick="downloadResume()">
+                        Resume <i class="fa-solid fa-file"></i>
+                    </a>
+                    <a href="https://github.com/YeisonPetit" class="btn">
+                        Github <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yeison-petit-francois-821006316/" class="btn">
+                        Linkedin <i class="fa-brands fa-linkedin"></i></i>
+                    </a>
+                </div>
             </div>
             <div class="myphoto">
                 <img src="assets/me1.png" alt="">
-                </div>
+            </div>
         </section>
 
-<!-- section of the technologies -->
- <section class="technologies" id="technologies">
+        <!-- section of the technologies -->
+        <!-- <section class="technologies" id="technologies">
         <h2>Skills and Technologies</h2>
         <div class="tech-icons">
             <i class="fa-brands fa-html5" title="HTML5"></i>
@@ -77,227 +76,463 @@
             <path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
 </svg>
 </div>
-</section>
+</section> -->
 
 
-<section class="aboutMe" id="aboutMe">
-    <div class="abouMeContent">
-            <h2>About Me</h2>
-            <p>I am a dedicated and passionate frontend developer with a strong foundation in HTML, CSS, Tailwind, React and JavaScript. 
-                I enjoy creating visually appealing and user-friendly websites that provide an excellent user experience. 
-                I am constantly learning and staying updated with the latest web development trends and technologies to enhance my skills.
-                My goal is to contribute to innovative projects and collaborate with like-minded professionals in the tech industry.</p>
-            </div>
-            <div class="career">
-                <div class="box_career">
-                    <h1>Juana de arco | 2023</h1>
-                    <p>Graduated from Juana de arco High school.</p>
-                </div>
-                <div class="box_career">
-                    <h1>unicaribe | 2025</h1>
-                    <p>im Currently studying software enginering, improving my skills.</p>
-                </div>
-                <!-- <div class="box"></div> -->
-            </div>
-</section>
-
-    <!-- Section of the projects -->
-    <section class="projects" id="projects">
-        <h2>My Projects</h2>
-        <div class="projects_box">
-            <div class="box">
-                <a href="https://layoud-food.vercel.app/#">
-                    <div class="img_box">
-                        <img src="assets/websiteFood2.png" alt="Food Website Project">
-                    </div>
-                    <div class="text_box">
-                        <h1>Food Website</h1>
-                        <span>A modern food ordering website with responsive design and smooth animations.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="box">
-                <a href="https://yeisonpetit.github.io/encriptador/">
-                    <div class="img_box">
-                        <img src="assets/encriptador.png" alt="Dashboard Project">
-                    </div>
-                    <div class="text_box">
-                        <h1>Encriptador App</h1>
-                        <span>Text encryption application for securing and protecting sensitive 
-                            information with cryptographic algorithms.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="box">
-                <a href="https://yeisonpetit.github.io/Juego-secreto/">
-                    <div class="img_box">
-                        <img src="assets/juego-secreto.png"E-commerce Project">
-                    </div>
-                    <div class="text_box">
-                        <h1>Number Guessing Game</h1>
-                        <span>Classic guessing game featuring random number 
-                            generation and interactive user gameplay experience.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="box">
-                <a href="https://react-pokemon-api-self.vercel.app/">
-                    <div class="img_box">
-                        <img src="assets/pokedex.png" alt="Mobile App Project">
-                    </div>
-                    <div class="text_box">
-                        <h1>React PokeDex</h1>
-                        <span>React app displaying Pokémon data from PokéAPI with responsive design.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                        <i class="fa-brands fa-react"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
-            <path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
-            </svg>
-
-                        
-                        
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="https://yeisonpetit.github.io/Todo-app/">
-                    <div class="img_box">
-                        <img src="assets/todoApp2.png" alt="web App Project">
-                    </div>
-                    <div class="text_box">
-                        <h1>TODO APP</h1>
-                        <span>Task management application for organizing daily activities with add, 
-                            edit, and delete functionality.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="https://yeisonpetit.github.io/Weather-app/">
-                    <div class="img_box">
-                        <img src="assets/weatherApp.png" alt="weatherApp Project">">
-                    </div>
-                    <div class="text_box">
-                        <h1>Weather App JS</h1>
-                        <span>Weather monitoring application with current conditions, 
-                            forecasts, and location-based weather updates.</span>
-                        <i class="fa-brands fa-html5" title="HTML5"></i>
-                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                        <i class="fa-brands fa-js" title="JavaScript"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-<div class="floating-shapes">
-        <i class="fas fa-envelope shape"></i>
-        <i class="fas fa-paper-plane shape"></i>
-        <i class="fas fa-envelope shape"></i>
-        <i class="fas fa-heart shape"></i>
-        <i class="fas fa-envelope shape"></i>
-        <i class="fas fa-heart shape"></i>
-        <i class="fas fa-envelope shape"></i>
-        <i class="fas fa-paper-plane shape"></i>
-        <i class="fas fa-heart shape"></i>
-        <i class="fas fa-paper-plane shape"></i>
-        <i class="fas fa-heart shape"></i>
-    </div>
-
-    <section class="contact">
-        <h1>Let's talk <i class="fa-solid fa-envelope"></i></h1>
-        
-        <div class="form_of_Contact">
-            <!-- Información de contacto -->
-            <div class="contact-info">
-                <!-- <h2>Get in Touch</h2> -->
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>Address</strong><br>
-                        Residencial amanda 1, calle Fundaciion #20A
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <strong>Phone</strong><br>
-                        +1 (809) 607 7212
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <strong>Email</strong><br>
-                        yeisonpetit2@gmail.com
-                    </div>
-                </div>
-            </div>
-
-            <div class="form">
-                <div class="success-message" id="successMessage">
-                    <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te contactaremos pronto.
+        <!-- Education container -->
+        <div class="education-container" id="Education">
+            <section class="education-section">
+                <div class="floating-shapes-education">
+                    <div class="shape-education"></div>
+                    <div class="shape-education"></div>
+                    <div class="shape-education"></div>
                 </div>
 
-                <form id="contactForm" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName" class="required">First Name</label>
-                            <div class="input-icon">
-                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
-                                <i class="fas fa-user"></i>
+                <div class="education-header">
+                    <h2 class="education-title">Education</h2>
+                    <p class="education-subtitle">The path of learning that has shaped me professionally</p>
+                </div>
+
+                <div class="education-timeline">
+                    <div class="timeline-line"></div>
+
+                    <!-- Universidad - Unicaribe (Actual) -->
+                    <div class="education-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="education-content">
+                            <div class="education-icon">
+                                <i class="fas fa-university"></i>
                             </div>
-                            <div class="error" id="firstNameError">Please enter your first name</div>
+                            <h3 class="education-degree">
+                                Software Engineering
+                                <span class="current-badge">currently</span>
+                            </h3>
+                            <h4 class="education-school">Universidad del Caribe (UNICARIBE)</h4>
+                            <p class="education-period">2025 - Present</p>
+                            <p class="education-description">
+                                I am a passionate Frontend Developer with 2 years of experience
+                                building clean, responsive, and user-friendly websites. I specialize
+                                in modern web development with HTML, CSS, JavaScript, and Tailwind CSS, and I am
+                                currently expanding my skills in React to create dynamic and interactive applications.
+                                My focus is on delivering exceptional user experiences
+                                while continuously improving my technical expertise.
+                            </p>
+                            <ul class="education-achievements">
+                                <li>Maintained a strong academic performance.</li>
+                                <li>Participated in web development projects.</li>
+                                <li>Group leader in collaborative projects.</li>
+                                <li>Specialized in Frontend development.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Educación Secundaria -->
+                    <div class="education-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="education-content">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="education-degree">Bachelor</h3>
+                            <h4 class="education-school">Centro Pedagógico Juana De Arco</h4>
+                            <p class="education-period">2022 - 2023</p>
+                            <p class="education-description">
+                                Completed high school with strong
+                                academic performance, active participation in
+                                group projects, and recognition for leadership
+                                and collaboration.
+                            </p>
+                            <ul class="education-achievements">
+                                <li>Graduated with honors</li>
+                                <li>President of the programming club</li>
+                                <li>First place in math olympiad</li>
+                                <li>Certification in basic computer science</li>
+                                <li>Participation in science and technology fairs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Section about me -->
+        <div class="about-container">
+            <section class="about-section">
+                <div class="floating-shapes-about">
+                    <div class="shape-about"></div>
+                    <div class="shape-about"></div>
+                    <div class="shape-about"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="profile-section-about">
+                        <div class="profile-image-about" id="profileImageAbout">
+                            <img src="assets/me1.png" alt="picture of yeison petit">
+                        </div>
+                        <h2 class="name-about">Yeison Petit</h2>
+                        <p class="role-about">Web Developer</p>
+                        <div class="social-links-about">
+                            <a href="https://www.linkedin.com/in/yeison-petit-francois-821006316/"
+                                class="social-link-about">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/YeisonPetit" class="social-link-about">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link-about">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link-about">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-section-about">
+                        <h1 class="section-title-about">About Me</h1>
+
+                        <p class="description-about">
+                            I am a passionate Frontend Developer with 2 years of experience creating clean and
+                            responsive websites. I specialize in modern web development using HTML, CSS, JavaScript,
+                            and Tailwind CSS to build user-friendly interfaces that not only look great but also deliver
+                            an excellent user experience. I am continuously learning and expanding my skills, currently
+                            exploring React to create more dynamic and interactive applications.
+                        </p>
+
+                        <div class="skills-grid-about">
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-react"></i></div>
+                                <div class="skill-name-about">React</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-node-js"></i></div>
+                                <div class="skill-name-about">Node.js</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-js"></i></div>
+                                <div class="skill-name-about">JavaScript</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about tailwind">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+
+                                        <!-- Definir el gradiente -->
+                                        <defs>
+                                            <linearGradient id="purpleBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%"
+                                                    style="stop-color:rgb(102, 126, 234);stop-opacity:1" />
+                                                <stop offset="100%"
+                                                    style="stop-color:rgb(118, 75, 162);stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill="url(#purpleBlueGradient)" stroke="url(#purpleBlueGradient)"
+                                                fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 
+                1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 
+                1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 
+                12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 
+                2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 
+                13.145 9.478 12 7 12z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="skill-name-about">Tailwind CSS</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-figma"></i></div>
+                                <div class="skill-name-about">Figma</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-html5"></i></div>
+                                <div class="skill-name-about">HTML5</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fa-brands fa-git-alt"></i></div>
+                                <div class="skill-name-about">Git</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fab fa-aws"></i></div>
+                                <div class="skill-name-about">AWS</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Definir el gradiente -->
+                                    <defs>
+                                        <linearGradient id="astroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>file_type_astro</title>
+                                        <path fill="url(#astroGradient)"
+                                            d="M5.9,18.847a7.507,7.507,0,0,0-.572,2.624,3.265,3.265,0,0,0,.551,1.553,7.427,7.427,0,0,0,2.093,1.681L13.1,28.119A7.332,7.332,0,0,0,15.2,29.287a3.239,3.239,0,0,0,1.5,0,7.381,7.381,0,0,0,2.117-1.16L24,24.711a7.512,7.512,0,0,0,2.117-1.688,3.241,3.241,0,0,0,.55-1.563,7.515,7.515,0,0,0-.587-2.643L21.547,4.551a3.973,3.973,0,0,0-.54-1.3,1.733,1.733,0,0,0-.7-.51,3.972,3.972,0,0,0-1.4-.122H13.005a3.932,3.932,0,0,0-1.4.125,1.713,1.713,0,0,0-.7.512,3.94,3.94,0,0,0-.535,1.3L5.9,18.848Zm13.24-13.2a3.329,3.329,0,0,1,.441,1.093l3.892,12.784a16.168,16.168,0,0,0-4.653-1.573L16.291,9.391a.331.331,0,0,0-.513-.169.323.323,0,0,0-.119.169l-2.5,8.557a16.14,16.14,0,0,0-4.674,1.579L12.393,6.743a3.281,3.281,0,0,1,.442-1.094,1.458,1.458,0,0,1,.582-.43,3.31,3.31,0,0,1,1.175-.1h2.793a3.314,3.314,0,0,1,1.176.1,1.454,1.454,0,0,1,.583.432ZM16.127,21.06a5.551,5.551,0,0,0,3.4-.923,2.8,2.8,0,0,1-.207,2.182A3.938,3.938,0,0,1,17.773,23.8c-.674.428-1.254.8-1.254,1.787a2.079,2.079,0,0,0,.209.914,2.49,2.49,0,0,1-1.535-2.3v-.061c0-.683,0-1.524-.962-1.524a1.028,1.028,0,0,0-.391.077,1.021,1.021,0,0,0-.552.551,1.03,1.03,0,0,0-.079.391,3.769,3.769,0,0,1-.988-2.644,4.206,4.206,0,0,1,.175-1.248c.4.757,1.92,1.32,3.731,1.32Z"
+                                            style="fill-rule:evenodd" />
+                                    </g>
+                                </svg>
+                                <div class="skill-name-about">Astro</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fa-solid fa-database"></i></div>
+                                <div class="skill-name-about">SQL</div>
+                            </div>
+                            <div class="skill-item-about">
+                                <div class="skill-icon-about"><i class="fa-brands fa-html5"></i></div>
+                                <div class="skill-name-about">HTML</div>
+                            </div>
+                        </div>
+
+                        <div class="stats-about">
+                            <div class="stat-item-about">
+                                <span class="stat-number-about" data-target="7">0</span>
+                                <span class="stat-label-about">Proyectos Completados</span>
+                            </div>
+                            <div class="stat-item-about">
+                                <span class="stat-number-about" data-target="2">0</span>
+                                <span class="stat-label-about">Años de Experiencia</span>
+                            </div>
+                            <div class="stat-item-about">
+                                <span class="stat-number-about" data-target="100">0</span>
+                                <span class="stat-label-about">Satisfacción Cliente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Section of the projects -->
+        <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <div class="projects_box">
+                <div class="box">
+                    <a href="https://yeisonpetit.github.io/Weather-app/">
+                        <div class="img_box">
+                            <img src="assets/pixerHunter.png" alt="GAME Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>PixelHunter</h1>
+                            <span>PixelHunter is a game discovery 
+                                platform built with HTML5, CSS3, 
+                                JavaScript, Supabase, and RAWG API. 
+                                Features game browsing, search, user 
+                                authentication, and responsive design.
+                            </span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="https://layoud-food.vercel.app/#">
+                        <div class="img_box">
+                            <img src="assets/websiteFood2.png" alt="Food Website Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>Food Website</h1>
+                            <span>A modern food ordering website with responsive design and smooth animations.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="https://yeisonpetit.github.io/Encriptador-de-texto/">
+                        <div class="img_box">
+                            <img src="assets/encriptador.png" alt="Dashboard Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>Encriptador App</h1>
+                            <span>Text encryption application for securing and protecting sensitive
+                                information with cryptographic algorithms.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="https://yeisonpetit.github.io/Juego-secreto/">
+                        <div class="img_box">
+                            <img src="assets/juego-secreto.png" E-commerce Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>Number Guessing Game</h1>
+                            <span>Classic guessing game featuring random number
+                                generation and interactive user gameplay experience.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="https://react-pokemon-api-self.vercel.app/">
+                        <div class="img_box">
+                            <img src="assets/pokedex.png" alt="Mobile App Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>React PokeDex</h1>
+                            <span>React app displaying Pokémon data from PokéAPI with responsive design.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                            <i class="fa-brands fa-react"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                viewBox="0 0 48 48">
+                                <path fill="#00acc1"
+                                    d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="https://yeisonpetit.github.io/Todo-app/">
+                        <div class="img_box">
+                            <img src="assets/todoApp2.png" alt="web App Project">
+                        </div>
+                        <div class="text_box">
+                            <h1>TODO APP</h1>
+                            <span>Task management application for organizing daily activities with add,
+                                edit, and delete functionality.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="https://yeisonpetit.github.io/Weather-app/">
+                        <div class="img_box">
+                            <img src="assets/weatherApp.png" alt="weatherApp Project">">
+                        </div>
+                        <div class="text_box">
+                            <h1>Weather App JS</h1>
+                            <span>Weather monitoring application with current conditions,
+                                forecasts, and location-based weather updates.</span>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+<!-- floating shapes for the contact section -->
+        <div class="floating-shapes">
+            <i class="fas fa-envelope shape"></i>
+            <i class="fas fa-paper-plane shape"></i>
+            <i class="fas fa-envelope shape"></i>
+            <i class="fas fa-heart shape"></i>
+            <i class="fas fa-envelope shape"></i>
+            <i class="fas fa-heart shape"></i>
+            <i class="fas fa-envelope shape"></i>
+            <i class="fas fa-paper-plane shape"></i>
+            <i class="fas fa-heart shape"></i>
+            <i class="fas fa-paper-plane shape"></i>
+            <i class="fas fa-heart shape"></i>
+        </div>
+
+        <section class="contact">
+            <h1>Let's talk <i class="fa-solid fa-envelope"></i></h1>
+
+            <div class="form_of_Contact">
+                <!-- Información de contacto -->
+                <div class="contact-info">
+                    <!-- <h2>Get in Touch</h2> -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            Residencial amanda 1, calle Fundaciion #20A
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +1 (809) 607 7212
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            yeisonpetit2@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="required">First Name</label>
+                                <div class="input-icon">
+                                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="error" id="firstNameError">Please enter your first name</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="required">Last Name</label>
+                                <div class="input-icon">
+                                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="error" id="lastNameError">Please enter your last name</div>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="lastName" class="required">Last Name</label>
+                            <label for="email" class="required">Email Address</label>
                             <div class="input-icon">
-                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
-                                <i class="fas fa-user"></i>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="error" id="lastNameError">Please enter your last name</div>
+                            <div class="error" id="emailError">Please enter a valid email address</div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="email" class="required">Email Address</label>
-                        <div class="input-icon">
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                            <i class="fas fa-envelope"></i>
+
+                        <div class="form-group">
+                            <label for="message" class="required">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message here..."
+                                required></textarea>
+                            <div class="error" id="messageError">Please enter your message</div>
                         </div>
-                        <div class="error" id="emailError">Please enter a valid email address</div>
-                    </div>
 
-
-                    <div class="form-group">
-                        <label for="message" class="required">Message</label>
-                        <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-                        <div class="error" id="messageError">Please enter your message</div>
-                    </div>
-
-                    <input type="submit" value="Send Message">
-                </form>
+                        <input type="submit" value="Send Message">
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+
     </main>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

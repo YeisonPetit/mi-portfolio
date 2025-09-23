@@ -41,6 +41,7 @@ window.addEventListener("load", () => {
         btnaun.textContent = "🌙";
     }
 });
+
 // Función para descargar el resume
 function downloadResume() {
     const pdfPath = 'Resume/YEISON-PETIT-CV.docx.pdf';
@@ -75,8 +76,177 @@ function downloadResume() {
     }
 }
 
+// JavaScript para la sección About Me
+document.addEventListener('DOMContentLoaded', function() {
+    // Sparkles en hover de la imagen de perfil
+    const profileImage = document.getElementById('profileImageAbout');
+    
+    if (profileImage) {
+        profileImage.addEventListener('mouseenter', createSparklesAbout);
+    }
+    
+    function createSparklesAbout() {
+        for (let i = 0; i < 6; i++) {
+            setTimeout(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle-about';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                profileImage.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    if (sparkle.parentNode) {
+                        sparkle.parentNode.removeChild(sparkle);
+                    }
+                }, 2000);
+            }, i * 200);
+        }
+    }
+    
+    // Animación de contador para las estadísticas
+    function animateCounterAbout(element, target) {
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            if (target === 100) {
+                element.textContent = Math.floor(current) + '%';
+            } else {
+                element.textContent = target > 10 ? Math.floor(current) + '+' : Math.floor(current);
+            }
+        }, 40);
+    }
+    
+    // Intersection Observer para activar animaciones
+    const observerOptionsAbout = {
+        threshold: 0.5
+    };
+    
+    const observerAbout = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number-about');
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-target'));
+                    animateCounterAbout(stat, target);
+                });
+            }
+        });
+    }, observerOptionsAbout);
+    
+    const statsSection = document.querySelector('.stats-about');
+    if (statsSection) {
+        observerAbout.observe(statsSection);
+    }
+    
+    // Efecto de parallax en las formas flotantes
+    document.addEventListener('mousemove', (e) => {
+        const shapes = document.querySelectorAll('.shape-about');
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        shapes.forEach((shape, index) => {
+            const speed = (index + 1) * 0.3;
+            const x = (mouseX - 0.5) * speed * 30;
+            const y = (mouseY - 0.5) * speed * 30;
+            shape.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    });
+});
 
-//add animation with scrollReveal
+// JavaScript para la sección de educación
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer para animaciones al hacer scroll
+    const observerOptionsEducation = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observerEducation = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptionsEducation);
+
+    // Observar todos los elementos de educación
+    const educationItems = document.querySelectorAll('.education-item');
+    educationItems.forEach(item => {
+        observerEducation.observe(item);
+    });
+
+    // Efecto parallax en las formas flotantes
+    document.addEventListener('mousemove', (e) => {
+        const shapes = document.querySelectorAll('.shape-education');
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        shapes.forEach((shape, index) => {
+            const speed = (index + 1) * 0.2;
+            const x = (mouseX - 0.5) * speed * 40;
+            const y = (mouseY - 0.5) * speed * 40;
+            shape.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+        });
+    });
+
+    // Animación de la línea de tiempo
+    function animateTimelineLine() {
+        const timelineLine = document.querySelector('.timeline-line');
+        if (timelineLine) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        timelineLine.style.animation = 'drawLine-education 2s ease forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(timelineLine);
+        }
+    }
+
+    // Crear animación para la línea de tiempo
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes drawLine-education {
+            from {
+                height: 0;
+            }
+            to {
+                height: 100%;
+            }
+        }
+        .timeline-line {
+            height: 0;
+        }
+    `;
+    document.head.appendChild(style);
+
+    animateTimelineLine();
+
+    // Efecto hover en los puntos de la línea de tiempo
+    const timelineDots = document.querySelectorAll('.timeline-dot');
+    timelineDots.forEach(dot => {
+        dot.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(-50%) scale(1.5)';
+            this.style.boxShadow = '0 15px 35px rgba(85, 140, 223, 0.6)';
+        });
+        
+        dot.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(-50%) scale(1)';
+            this.style.boxShadow = '0 5px 15px rgba(52, 89, 233, 0.3)';
+        });
+    });
+
+    console.log('🎓 Sección de Educación inicializada correctamente');
+});
+
+//animaciones con scrollReveal
 
 ScrollReveal().reveal('.abouMeContent', {
     distance: '150px',
@@ -109,3 +279,14 @@ ScrollReveal().reveal('.myphoto', {
     distance: '150px',
     origin: 'bottom', mobile: false
 });
+
+ScrollReveal().reveal('.education-container', {
+    distance: '150px',
+    origin: 'bottom', mobile: false
+});
+
+ScrollReveal().reveal('.skills-content', {
+    distance: '150px',
+    origin: 'bottom', mobile: false
+});
+
