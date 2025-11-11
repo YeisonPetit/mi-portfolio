@@ -1,3 +1,45 @@
+// Utility Functions
+function createParallaxEffect(selector, speedMultiplier = 0.3) {
+    document.addEventListener('mousemove', (e) => {
+        const shapes = document.querySelectorAll(selector);
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        shapes.forEach((shape, index) => {
+            const speed = (index + 1) * speedMultiplier;
+            const x = (mouseX - 0.5) * speed * 30;
+            const y = (mouseY - 0.5) * speed * 30;
+            shape.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    });
+}
+
+function createIntersectionObserver(callback, options = {}) {
+    const defaultOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px',
+        ...options
+    };
+    return new IntersectionObserver(callback, defaultOptions);
+}
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        if (target === 100) {
+            element.textContent = Math.floor(current) + '%';
+        } else {
+            element.textContent = target > 10 ? Math.floor(current) + '+' : Math.floor(current);
+        }
+    }, 40);
+}
+
 const btnaun = document.getElementById("btnaun");
 // const btnBurger = document.getElementById("btnBurger")
 const container_Links = document.getElementById("container_Links")
@@ -103,40 +145,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Animación de contador para las estadísticas
-    function animateCounterAbout(element, target) {
-        let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            if (target === 100) {
-                element.textContent = Math.floor(current) + '%';
-            } else {
-                element.textContent = target > 10 ? Math.floor(current) + '+' : Math.floor(current);
-            }
-        }, 40);
-    }
-    
     // Intersection Observer para activar animaciones
-    const observerOptionsAbout = {
-        threshold: 0.5
-    };
-    
-    const observerAbout = new IntersectionObserver((entries) => {
+    const observerAbout = createIntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const statNumbers = entry.target.querySelectorAll('.stat-number-about');
                 statNumbers.forEach(stat => {
                     const target = parseInt(stat.getAttribute('data-target'));
-                    animateCounterAbout(stat, target);
+                    animateCounter(stat, target);
                 });
             }
         });
-    }, observerOptionsAbout);
+    }, { threshold: 0.5 });
     
     const statsSection = document.querySelector('.stats-about');
     if (statsSection) {
@@ -144,35 +164,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Efecto de parallax en las formas flotantes
-    document.addEventListener('mousemove', (e) => {
-        const shapes = document.querySelectorAll('.shape-about');
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        shapes.forEach((shape, index) => {
-            const speed = (index + 1) * 0.3;
-            const x = (mouseX - 0.5) * speed * 30;
-            const y = (mouseY - 0.5) * speed * 30;
-            shape.style.transform = `translate(${x}px, ${y}px)`;
-        });
-    });
+    createParallaxEffect('.shape-about', 0.3);
 });
 
 // JavaScript para la sección de educación
 document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer para animaciones al hacer scroll
-    const observerOptionsEducation = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observerEducation = new IntersectionObserver((entries) => {
+    const observerEducation = createIntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
             }
         });
-    }, observerOptionsEducation);
+    });
 
     // Observar todos los elementos de educación
     const educationItems = document.querySelectorAll('.education-item');
@@ -181,24 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Efecto parallax en las formas flotantes
-    document.addEventListener('mousemove', (e) => {
-        const shapes = document.querySelectorAll('.shape-education');
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        shapes.forEach((shape, index) => {
-            const speed = (index + 1) * 0.2;
-            const x = (mouseX - 0.5) * speed * 40;
-            const y = (mouseY - 0.5) * speed * 40;
-            shape.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
-        });
-    });
+    createParallaxEffect('.shape-education', 0.2);
 
     // Animación de la línea de tiempo
     function animateTimelineLine() {
         const timelineLine = document.querySelector('.timeline-line');
         if (timelineLine) {
-            const observer = new IntersectionObserver((entries) => {
+            const observer = createIntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         timelineLine.style.animation = 'drawLine-education 2s ease forwards';

@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  /* Color gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea, #764ba2);
+  --gradient-primary-opacity-10: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  --gradient-primary-opacity-15: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+  --gradient-primary-opacity-20: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  --gradient-blue-opacity-10: linear-gradient(135deg, rgba(48, 79, 218, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  
+  /* Shadow colors */
+  --shadow-primary: rgba(102, 126, 234, 0.3);
+  --shadow-primary-light: rgba(102, 126, 234, 0.1);
+  --shadow-primary-medium: rgba(102, 126, 234, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -109,7 +123,7 @@ body.active .nav-links {
   content: "";
   height: 4px;
   width: 0;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: var(--gradient-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -227,7 +241,7 @@ body.active .home {
 
 .resume a {
   font-size: 1rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: var(--gradient-primary);
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 10px;
@@ -242,7 +256,7 @@ body.active .home {
 
 .myphoto img {
   width: clamp(100px, 45vw, 400px);
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: var(--gradient-primary);
   margin-left: 50px;
   border-radius: 50%;
 }
@@ -1231,7 +1245,7 @@ main{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.5rem;
-        animation: fadeInUp-about 1s ease 0.2s both;
+        animation: fadeInUp 1s ease 0.2s both;
     }
 
     .role-about {
@@ -1239,14 +1253,14 @@ main{
         color: #666;
         margin-bottom: 2rem;
         font-weight: 300;
-        animation: fadeInUp-about 1s ease 0.4s both;
+        animation: fadeInUp 1s ease 0.4s both;
     }
 
     .social-links-about {
         display: flex;
         justify-content: center;
         gap: 1rem;
-        animation: fadeInUp-about 1s ease 0.6s both;
+        animation: fadeInUp 1s ease 0.6s both;
     }
 
     .social-link-about {
@@ -1269,7 +1283,7 @@ main{
     }
 
     .info-section-about {
-        animation: fadeInRight-about 1s ease 0.8s both;
+        animation: fadeInRight 1s ease 0.8s both;
     }
 
     .section-title-about {
@@ -1383,7 +1397,7 @@ main{
         font-weight: 400;
     }
 
-    @keyframes fadeInUp-about {
+    @keyframes fadeInUp {
         from {
             opacity: 0;
             transform: translateY(30px);
@@ -1394,7 +1408,7 @@ main{
         }
     }
 
-    @keyframes fadeInRight-about {
+    @keyframes fadeInRight {
         from {
             opacity: 0;
             transform: translateX(30px);
@@ -1402,6 +1416,17 @@ main{
         to {
             opacity: 1;
             transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
@@ -1559,7 +1584,7 @@ main{
         margin-bottom: 1rem;
         position: relative;
         display: inline-block;
-        animation: fadeInDown-education 1s ease 0.2s both;
+        animation: fadeInDown 1s ease 0.2s both;
     }
 
     .education-title::after {
@@ -1578,7 +1603,7 @@ main{
         font-size: 1.2rem;
         color: #666;
         font-weight: 300;
-        animation: fadeInDown-education 1s ease 0.4s both;
+        animation: fadeInDown 1s ease 0.4s both;
     }
 
     .education-timeline {
@@ -1601,7 +1626,7 @@ main{
         display: flex;
         margin-bottom: 4rem;
         position: relative;
-        animation: fadeInUp-education 1s ease both;
+        animation: fadeInUp 1s ease both;
     }
 
     .education-item:nth-child(2) { animation-delay: 0.6s; }
@@ -1765,28 +1790,6 @@ main{
     @keyframes glow-education {
         from { box-shadow: 0 0 10px rgba(102, 126, 234, 0.5); }
         to { box-shadow: 0 0 20px rgba(102, 126, 234, 0.8); }
-    }
-
-    @keyframes fadeInDown-education {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInUp-education {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     /* Responsive */
